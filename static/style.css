@@ -1,0 +1,28 @@
+
+body{
+    background-color: rgb(93, 240, 93);
+}
+.myimage{
+    position: relative;
+}
+.myimage img{
+    display: block;
+}
+.myimage .contant{
+    /* position: absolute; */
+    color: black;
+}
+
+.foot{
+    padding-top: 33px;
+    /* margin: 40px; */
+    width: 100%;
+    height: 25%;
+    /* padding-bottom: 0px; */
+    padding: 20px;
+    display: block;
+    background-color: rgb(135, 240, 135);
+   
+}
+
+
