@@ -1,18 +1,19 @@
 
 body{
-    background-color: #d7e3be;
-}
-.myimage{
-    position: relative;
-}
-.myimage img{
-    display: block;
-}
-.myimage .contant{
-    /* position: absolute; */
-    color: black;
+   
+    background-image: url("./img.jpg");
+background-size: cover;
+
 }
 
+.contant{
+font-weight: bolder;
+
+background-color: rgba(0,0,0,0.5);
+padding-top: 12px;
+padding-bottom: 12px;
+color: white;
+}
 .foot{
     padding-top: 33px;
     /* margin: 40px; */
@@ -21,7 +22,10 @@ body{
     /* padding-bottom: 0px; */
     padding: 20px;
     display: block;
-    background-color: rgb(135, 240, 135);
+    /* background-color: rgb(135, 240, 135); */
+    color: whitesmoke;
+    font-weight: bolder;
+    
 }
 #form-page{
     background-image: url(./images\ \(1\).jpeg);
@@ -31,7 +35,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    background-size:cover;
     
   
 }
