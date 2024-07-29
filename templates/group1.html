@@ -7,12 +7,12 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color:#d6efaf;
+            background-color: #d6efaf;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 110vh;
+            min-height: 100vh;
             margin: 0;
         }
         .crop-container {
@@ -27,24 +27,37 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1 0 30%; /* Ensures three items in the first row */
-            max-width: 30%;
+            flex: 1 0 22%; /* Adjust to fit four items per row */
+            max-width: 22%;
+            position: relative;
+            height: 290px; /* Fixed height for consistency */
         }
         .crop-card img {
             width: 100%;
-            height: 240px;
+            height: 100%; /* Ensure images take full height */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
         }
         .crop-card-title {
+            position: absolute;
+            bottom: 0; /* Position at the bottom of the card */
+            width: 100%;
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(26, 227, 20, 0.9);
             color: #fff;
-            font-size: 1.2em;
+            font-size: 1em;
+            box-sizing: border-box; /* Ensure padding does not affect width */
         }
         @media (max-width: 768px) {
             .crop-card {
-                flex: 1 0 45%; /* Ensures two items in the first row */
+                flex: 1 0 45%; /* Two items per row on tablets */
                 max-width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .crop-card {
+                flex: 1 0 90%; /* One item per row on mobile devices */
+                max-width: 90%;
             }
         }
     </style>
@@ -52,19 +65,19 @@
 <body>
     <div class="crop-container">
         <div class="crop-card">
-            <img src=".\static\orange.webp" alt="Crop Image 2">
+            <img src="./static/orange.webp" alt="Orange fruit">
             <div class="crop-card-title">ORANGE</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\coco.webp" alt="Crop Image 3">
+            <img src="./static/coco.webp" alt="Coconut fruit">
             <div class="crop-card-title">COCONUT</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\papaya.avif" alt="Crop Image 4">
+            <img src="./static/papaya.avif" alt="Papaya fruit">
             <div class="crop-card-title">PAPAYA</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\pomgrante.webp" alt="Crop Image 5">
+            <img src="./static/pomgrante.webp" alt="Pomegranate fruit">
             <div class="crop-card-title">POMEGRANATE</div>
         </div>
     </div>

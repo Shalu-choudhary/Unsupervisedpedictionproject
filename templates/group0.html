@@ -7,7 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color:#d6efaf;
+            background-color: #d6efaf;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -29,17 +29,23 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             flex: 1 0 30%; /* Ensures three items in the first row */
             max-width: 30%;
+            position: relative;
         }
         .crop-card img {
             width: 100%;
-            height: 85%;
+            height: 300px; /* Fixed height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
         }
         .crop-card-title {
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(26, 227, 20, 0.9);
             color: #fff;
             font-size: 1.2em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         @media (max-width: 768px) {
             .crop-card {
@@ -47,32 +53,38 @@
                 max-width: 45%;
             }
         }
+        @media (max-width: 480px) {
+            .crop-card {
+                flex: 1 0 90%; /* Ensures one item per row on very small screens */
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="crop-container">
         <div class="crop-card">
-            <img src=".\static\cotton.webp" alt="Crop Image 1">
+            <img src="./static/cotton.webp" alt="Cotton plant">
             <div class="crop-card-title">COTTON</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\jutt.webp" alt="Crop Image 2">
+            <img src="./static/jutt.webp" alt="Jute plant">
             <div class="crop-card-title">JUTE</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\banana.webp" alt="Crop Image 3">
+            <img src="./static/banana.webp" alt="Banana plant">
             <div class="crop-card-title">BANANA</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\papaya.avif" alt="Crop Image 4">
+            <img src="./static/papaya.avif" alt="Papaya fruit">
             <div class="crop-card-title">PAPAYA</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\maizewebp.webp" alt="Crop Image 5">
+            <img src="./static/maizewebp.webp" alt="Maize plant">
             <div class="crop-card-title">MAIZE</div>
         </div>
         <div class="crop-card">
-            <img src=".\static\lentil.webp" alt="Crop Image 5">
+            <img src="./static/lentil.webp" alt="Lentil plant">
             <div class="crop-card-title">LENTIL</div>
         </div>
     </div>
